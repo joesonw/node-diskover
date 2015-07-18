@@ -6,9 +6,9 @@ service discovery service
 
 ###Create node
 
-> curl -XPOST http://127.0.0.1/keys/foo/bar -d '{"hello":"world"}'
+> curl -XPUT http://127.0.0.1/keys/foo/bar -d '{"hello":"world"}'
 
-'''json
+```json
 {
 	"name":"bar",
 	"path":"foo/bar",
@@ -17,7 +17,7 @@ service discovery service
 	},
 	"children":[]
 }
-'''
+```
 
 
 ###Get node
@@ -59,10 +59,10 @@ service discovery service
 
 ###Delete node
 
-> curl http://127.0.0.1/keys/foo/bar
+> curl -XDELETE http://127.0.0.1/keys/foo/bar
 
 
-> curl http://127.0.0.1/keys/foo
+> curl -XDELETE http://127.0.0.1/keys/foo
 
 
 
